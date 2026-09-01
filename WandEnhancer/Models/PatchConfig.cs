@@ -11,8 +11,7 @@ namespace WandEnhancer.Models
         ActivatePro = 1,
         DisableUpdates = 2,
         DisableTelemetry = 4,
-        DevToolsOnF12 = 8,
-        RemoteWebPanelPreview = 16
+        DevToolsOnF12 = 8
     }
     
     public sealed class PatchConfig
@@ -20,8 +19,6 @@ namespace WandEnhancer.Models
         private string _path;
         public HashSet<EPatchType> PatchTypes { get; set; }
 
-        public List<string> CustomScriptPaths { get; set; } = new List<string>();
-        
         public bool AutoApplyPatches { get; set; }
         
         [JsonIgnore]

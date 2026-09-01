@@ -145,4 +145,3 @@ appsettings.json
 *DotSettings.user
 .tmp
 .source
-web-panel/bridge/wand-remote-bridge.cjs

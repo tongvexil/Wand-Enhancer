@@ -157,12 +157,6 @@
             <LogicalName>proxydll</LogicalName>
         </EmbeddedResource>
     </ItemGroup>
-    <ItemGroup>
-      <EmbeddedResource Include="..\web-panel\dist\**\*.*" Condition="Exists('..\web-panel\dist\index.html')">
-        <LogicalName>remote-panel/dist/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
-      </EmbeddedResource>
-    </ItemGroup>
-    
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
       <PropertyGroup>

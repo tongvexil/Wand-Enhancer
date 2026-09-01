@@ -20,16 +20,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v5
-        with:
-          version: 10
-
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: pnpm
-          cache-dependency-path: web-panel/pnpm-lock.yaml
-
       - name: Validate release metadata
         shell: pwsh
         run: ./scripts/validate-release-metadata.ps1 -ExpectedVersion $env:RELEASE_VERSION
